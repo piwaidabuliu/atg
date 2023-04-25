@@ -5,14 +5,14 @@ on:
     branches:
       - main
   schedule:
-    - cron: "* * * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   autogreen:
     runs-on: ubuntu-latest
     
     permissions:
-      contents: read
+      contents: write
   
     steps:
       - name: Clone repository
